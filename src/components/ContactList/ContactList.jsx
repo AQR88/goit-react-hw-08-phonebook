@@ -1,27 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { delContact } from '../../redux/contacts/operations';
-import { getContacts, getFilter } from '../../redux/contacts/selectors';
+import { getVisibleContacts } from '../../redux/contacts/selectors';
 import css from './ContactList.module.css';
 import Notiflix from 'notiflix';
-import { createSelector } from '@reduxjs/toolkit';
-
-const getVisibleContacts = createSelector(
-  [getContacts, getFilter],
-  (contacts, filter) => {
-    if (!filter) {
-      return contacts;
-    } else {
-      return contacts.filter(contact => {
-        return contact.name.toLowerCase().includes(filter.toLowerCase());
-      });
-    }
-  }
-);
 
 export const ContactList = () => {
   const dispatch = useDispatch();
-  // const contacts = useSelector(getContacts);
-  // const filter = useSelector(getFilter);
+
   const visibleContacts = useSelector(getVisibleContacts);
 
   const handleDelete = id => {
