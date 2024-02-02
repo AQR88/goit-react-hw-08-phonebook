@@ -41,11 +41,7 @@ export const contactsSlice = createSlice({
         const index = state.items.findIndex(item => item.id === payload.id);
         state.items.splice(index, 1);
       })
-      // .addCase(delContact.fulfilled, (state, { payload }) => {
-      //   state.isLoading = false;
-      //   const index = state.items.findIndex(item => item.id === payload);
-      //   state.items.splice(index, 1);
-      // })
+
       .addCase(delContact.rejected, (state, { payload }) => {
         state.isLoading = false;
         state.error = payload;

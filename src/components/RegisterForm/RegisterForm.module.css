@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  border: none;
 }
 
 .label {
@@ -14,6 +15,7 @@
   text-align: left;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 8px;
+  border: none;
 }
 
 .formBtn {

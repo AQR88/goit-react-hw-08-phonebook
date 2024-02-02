@@ -9,6 +9,7 @@ const styles = {
     fontSize: 48,
     textAlign: 'center',
     color: 'rgb(27, 38, 60)',
+    textDecoration: 'italic',
   },
 };
 

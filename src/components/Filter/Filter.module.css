@@ -6,6 +6,8 @@
   font-size: large;
   text-align: left;
   padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
 }
 
 .filterLabel {
